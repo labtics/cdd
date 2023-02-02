@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+
+</head>
+<body >
+   
+    <table class="t1">
+        <tr >
+          <td>IMAGEN</td>
+           <td align="center"> <h2>Digital Docente </h2> </td>
+          <td  ALIGN="right" > <a href=iniciosesion.html class="a1"> Inicio de sesión</a></td>
+        </tr>
+        
+</table>
+<br><br>
+<div class="slider-container">
+<img class="slider-container " src="C:\xampp\htdocs\CDD\img\imagen1.jpg"/>
+<img   class="slider-container img" src="C:\xampp\htdocs\CDD\img\imagen2.jpg"/>
+<img  class="slider-container" src="C:\xampp\htdocs\CDD\img\imagen3.jpg"/>
+</div>
+
+            
+   
+<div id="">
+  <footer>
+      Universidad Juárez Autónoma de Tabasco-DAMC  &copy; 2022
+    </footer>
+</div>
+    
+</body>
+
+
+
+<style>
+
+
+
+table.t1{
+    width: 100%;
+    border: 15px;
+    color: #fffeff;
+height: auto;
+    background-color: #105709
+    ;
+    }
+
+    a.a1{
+        color: #fffeff;
+    }
+
+  
+    .slider-container {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  overflow-x:scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.slider-container img {
+  flex: 0 0 100%;
+  width: 100%;
+  object-fit: cover;
+  scroll-snap-align: center;
+}
+#footer {
+      background-color: #105709;
+      position: absolute;
+      display: inline-block;
+      bottom: 0;
+      width: 100%;
+      height: 40px;
+      color: white;
+    }
+
+    a{
+      text-decoration: none;
+    }
+</style>
+
+
+
+</html>
