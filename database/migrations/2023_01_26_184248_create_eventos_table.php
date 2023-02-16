@@ -17,11 +17,7 @@ return new class extends Migration
 
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
-<<<<<<< HEAD
-            $table->string('nombre_evento');
-=======
             $table->string('nombre');
->>>>>>> 6fcb8fbe11ebe8be6d98d547f96be61e1d0bea04
             $table->timestamps();
             
         });

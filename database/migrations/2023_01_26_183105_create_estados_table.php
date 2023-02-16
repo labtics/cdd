@@ -17,12 +17,9 @@ return new class extends Migration
             
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
-<<<<<<< HEAD
             $table->string('estados');
-=======
             $table->string('nombre');
             $table->string('abreviatura');
->>>>>>> 6fcb8fbe11ebe8be6d98d547f96be61e1d0bea04
             $table->timestamps();
 
         });

@@ -16,11 +16,9 @@ return new class extends Migration
         Schema::create('municipios', function (Blueprint $table) {
 
             $table->engine = 'InnoDB';
-<<<<<<< HEAD
             $table->bigIncrements('id');
             $table->string('municipios');
             $table->timestamps();
-=======
 
             $table->bigIncrements('id');
             $table->unsignedBigInteger('estado_id');
@@ -28,7 +26,6 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('estado_id')->references('id')->on('estados');
->>>>>>> 6fcb8fbe11ebe8be6d98d547f96be61e1d0bea04
             
         });
     }
