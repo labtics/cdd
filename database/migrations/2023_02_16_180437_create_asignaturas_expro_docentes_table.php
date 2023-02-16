@@ -13,17 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('asignaturas_expro_docentes', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('empleado',5);
-            $table->string('username')->unique();
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->string('tipo');
-            $table->rememberToken();
+            $table->unsignedBigInteger('asignatura_id');
+            $table->unsignedBigInteger('expro_docentes_id');
             $table->timestamps();
+
+            $table->foreign('asignatura_id')->references('id')->on('asignaturas')->onDelete('cascade');
+            $table->foreign('expro_docentes_id')->references('id')->on('expro_docentes')->onDelete('cascade');
         });
     }
 
@@ -34,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('asignaturas_ex_docentes');
     }
 };
