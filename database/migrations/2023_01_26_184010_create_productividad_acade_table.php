@@ -14,7 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('productividad_acade', function (Blueprint $table) {
-            $table->id();
+
+            $table->engine = 'InnoDB';
+            $table->bigIncrements('id');
+            $table->integer('Evento_p');
+            $table->string('Nombre_eventoP');
+            $table->string('Fecha_eventoP');
+            $table->date('Fecha_evento');
+            $table->string('institucion');
             $table->timestamps();
         });
     }

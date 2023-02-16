@@ -14,9 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('eventos', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('nombre_eve');
+
+            $table->engine = 'InnoDB';
+            $table->bigIncrements('id');
+            $table->string('nombre_evento');
             $table->timestamps();
+            
         });
     }
 

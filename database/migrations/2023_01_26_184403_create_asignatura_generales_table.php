@@ -14,10 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('asignatura_generales', function (Blueprint $table) {
-            $table->increments('id');
+
+            $table->engine = 'InnoDB';
+            $table->bigIncrements('id');
             $table->string('clave');
             $table->string('nombre');
             $table->timestamps();
+            
         });
     }
 

@@ -14,14 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('datos_domiciliares', function (Blueprint $table) {
-            $table->increments('id');
+
+            $table->engine = 'InnoDB';
+            $table->bigIncrements('id');
             $table->string('nacionalidad');
-            $table->integer('id_estado');
-            $table->integer('id_municipio');
+            $table->integer('estado_id');
+            $table->integer('municipio_id');
             $table->string('calle');
             $table->string('colonia');
-            $table->integer('codigo_P');
-            $table->string('num_ex_in');
+            $table->integer('codigo_postal');
+            $table->string('num_ex_int');
             $table->timestamps();
             
         });

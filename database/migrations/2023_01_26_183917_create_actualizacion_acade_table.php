@@ -14,8 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('actualizacion_acade', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('Evento');
+
+            $table->engine = 'InnoDB';
+            $table->bigIncrements('id');
+            $table->string('evento');
             $table->string('nombre_even');
             $table->string('fecha_even');
             $table->string('institucion_a');

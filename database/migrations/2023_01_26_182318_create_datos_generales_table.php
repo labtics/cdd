@@ -14,20 +14,22 @@ return new class extends Migration
     public function up()
     {
         Schema::create('datos_generales', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('No.empleado');
+            
+            $table->engine = 'InnoDB';
+            $table->bigIncrements('id');
+            $table->string('empleado');
             $table->string('nombre');
-            $table->string('Apellido_P');
-            $table->string('Apellido_M');
-            $table->interger('sexo');
-            $table->date('fecha_N');
+            $table->string('apellido_paterno');
+            $table->string('apellido_materno');
+            $table->integer('sexo');
+            $table->date('fecha_nacimiento');
             $table->integer('edad');
-            $table->string('telefono');
-            $table->string('telefono2');
+            $table->string('telefono')->unique();
+            $table->string('telefono2')->unique();
             $table->string('estado_civil');
-            $table->integer('id_categoria');
-            $table->string('RFC')->unique();;
-            $table->string('CURP')->unique();;
+            $table->integer('categoria_id');
+            $table->string('rfc')->unique();
+            $table->string('curp')->unique();
             $table->timestamps();
 
         });

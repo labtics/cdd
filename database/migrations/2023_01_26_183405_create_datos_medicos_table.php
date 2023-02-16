@@ -14,13 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('datos_medicos', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('No.S.S');
-            $table->string('Alergias');
-            $table->string('Patologias');
-            $table->string('Tipo_sangre');
-            $table->string('Contacto_eme');
-            $table->string('No.Telefono');
+
+            $table->engine = 'InnoDB';
+            $table->bigIncrements('id');
+            $table->string('nss');
+            $table->string('alergias');
+            $table->string('patologias');
+            $table->string('tipo_sangre');
+            $table->string('contacto_emergencia');
+            $table->string('telefono');
             $table->timestamps();
         });
     }

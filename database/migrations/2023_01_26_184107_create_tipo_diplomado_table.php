@@ -14,9 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tipo_diplomado', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('tipo_diplo');
+
+            $table->engine = 'InnoDB';
+            $table->bigIncrements('id');
+            $table->string('tipo_diplomado');
             $table->timestamps();
+            
         });
     }
 
