@@ -13,22 +13,20 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('municipios', function (Blueprint $table) {
+        Schema::create('academicos', function (Blueprint $table) {
 
             $table->engine = 'InnoDB';
-<<<<<<< HEAD
             $table->bigIncrements('id');
-            $table->string('municipios');
+            $table->unsignedBigInteger('user_id');
+            $table->string('grado_academico');
+            $table->string('titulo');
+            $table->string('cedula');
+            $table->string('estatus');
+            $table->binary('pdf_titulo');
+            $table->binary('pdf_cedula');
             $table->timestamps();
-=======
-
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('estado_id');
-            $table->string('nombre');
-            $table->timestamps();
-
-            $table->foreign('estado_id')->references('id')->on('estados');
->>>>>>> 6fcb8fbe11ebe8be6d98d547f96be61e1d0bea04
+            
+            $table->foreign('user_id')->references('id')->on('users')->OnDelete('cascade');
             
         });
     }
@@ -40,6 +38,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('municipios');
+        Schema::dropIfExists('academicos');
     }
 };
