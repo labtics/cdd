@@ -13,19 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('eventos', function (Blueprint $table) {
-<<<<<<< HEAD
-
-            $table->engine = 'InnoDB';
-            $table->bigIncrements('id');
-            $table->string('nombre');
+        Schema::create('datos_domiciliares', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nacionalidad');
+            $table->integer('id_estado');
+            $table->integer('id_municipio');
+            $table->string('calle');
+            $table->string('colonia');
+            $table->integer('codigo_P');
+            $table->string('num_ex_in');
             $table->timestamps();
             
-=======
-            $table->increments('id');
-            $table->string('nombre_eve');
-            $table->timestamps();
->>>>>>> 8f94b5e10f6ee9762bfa98e93f603bc702e7cd1b
         });
     }
 
@@ -36,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('eventos');
+        Schema::dropIfExists('datos_domiciliares');
     }
 };

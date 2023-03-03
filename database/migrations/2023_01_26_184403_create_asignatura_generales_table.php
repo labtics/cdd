@@ -13,19 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('eventos', function (Blueprint $table) {
-<<<<<<< HEAD
-
-            $table->engine = 'InnoDB';
-            $table->bigIncrements('id');
+        Schema::create('asignatura_generales', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('clave');
             $table->string('nombre');
             $table->timestamps();
-            
-=======
-            $table->increments('id');
-            $table->string('nombre_eve');
-            $table->timestamps();
->>>>>>> 8f94b5e10f6ee9762bfa98e93f603bc702e7cd1b
         });
     }
 
@@ -36,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('eventos');
+        Schema::dropIfExists('asignatura_generales');
     }
 };

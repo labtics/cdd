@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('estados', function (Blueprint $table) {
+<<<<<<< HEAD
             
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
@@ -21,6 +22,11 @@ return new class extends Migration
             $table->string('abreviatura');
             $table->timestamps();
 
+=======
+            $table->increments('id');
+            $table->string('Estados');
+            $table->timestamps();
+>>>>>>> 8f94b5e10f6ee9762bfa98e93f603bc702e7cd1b
         });
     }
 
