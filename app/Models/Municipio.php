@@ -9,5 +9,5 @@ class Municipio extends Model
 {
     use HasFactory;
     protected $table = 'municipios';
-    protected $fillable = ['id','municipios']; 
+    protected $fillable = ['id','estado_id','nombre']; 
 }

@@ -16,9 +16,6 @@ return new class extends Migration
         Schema::create('municipios', function (Blueprint $table) {
 
             $table->engine = 'InnoDB';
-            $table->bigIncrements('id');
-            $table->string('municipios');
-            $table->timestamps();
 
             $table->bigIncrements('id');
             $table->unsignedBigInteger('estado_id');
