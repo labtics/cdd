@@ -15,17 +15,23 @@ return new class extends Migration
     {
         Schema::create('eventos', function (Blueprint $table) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c491ac522ee4d2d7457a8d5d547276b0579e8096
 
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
             $table->string('nombre');
             $table->timestamps();
             
+<<<<<<< HEAD
 =======
             $table->increments('id');
             $table->string('nombre_eve');
             $table->timestamps();
 >>>>>>> 8f94b5e10f6ee9762bfa98e93f603bc702e7cd1b
+=======
+>>>>>>> c491ac522ee4d2d7457a8d5d547276b0579e8096
         });
     }
 
