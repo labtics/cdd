@@ -1,3 +1,13 @@
+@extends ('layouts.plantilla')
+
+@section('title')
+iniciosesion
+@endsection 
+
+@section ('contenido') 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +19,6 @@
 
 </head>
 <body>
-    <table id="t1">
-        <tr > 
-          <td>IMAGEN</td>
-          <td  ALIGN="right" > <a href=inicio.html class="a1">Inicio</a></td>
-           </tr>
-         
-        
-</table>
 
 <form action="#" method="POST" >
     <div id="login-box" >
@@ -38,11 +40,7 @@
         <button type="submit">Acceder</button>
     </div>
 </form>
-<div id="footer"> 
-<footer>
-    Universidad Juárez Autónoma de Tabasco-DAMC  &copy; 2022
-  </footer>
-</div>
+
 </body>
 
 <style>
@@ -102,3 +100,5 @@ input{
 
 
 </html>
+
+@endsection
