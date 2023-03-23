@@ -9,6 +9,7 @@
   .tabset .tab-panel {
     display: none;
   }
+
   
   .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
   .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),

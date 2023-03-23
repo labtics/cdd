@@ -14,12 +14,30 @@ use App\Http\Controllers\DocenteController;
 |
 */
 
-Route::get('cdd/datosgenerales', function () {
+Route::get('cdd/iniciosesion', function () {
 
   /*  $users = ['juan', 'pedro', 'maria' , 'ana'];-->*/
+<<<<<<< HEAD
     return view ('datosgenerales');
     
+=======
+    return view ('iniciosesion');
+   
+>>>>>>> 02eed1bc2677d5b99bfd481566a0696caaba36b4
 });
 
-Route::post('cdd/registrar', [DocenteController::class,'store'])->name('registrar');
+Route::get('cdd/principal', function () {
+
+  /*  $users = ['juan', 'pedro', 'maria' , 'ana'];-->*/
+    return view ('principal');
+   
+});
+
+Route::get('cdd/datosgenerales', function () {
+
+ 
+    return view ('datosgenerales');
+   
+});
+ Route ::post('cdd/registrar', [DocenteController::class, 'store'])->name('registrar');
 
