@@ -17,13 +17,8 @@ use App\Http\Controllers\DocenteController;
 Route::get('cdd/iniciosesion', function () {
 
   /*  $users = ['juan', 'pedro', 'maria' , 'ana'];-->*/
-<<<<<<< HEAD
     return view ('datosgenerales');
     
-=======
-    return view ('iniciosesion');
-   
->>>>>>> 02eed1bc2677d5b99bfd481566a0696caaba36b4
 });
 
 Route::get('cdd/principal', function () {
