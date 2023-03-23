@@ -34,11 +34,5 @@ Route::get('cdd/datosgenerales', function () {
     return view ('datosgenerales');
    
 });
-
-Route::get('cdd/vista2', function () {
-
-  /*  $users = ['juan', 'pedro', 'maria' , 'ana'];-->*/
-    return view ('vista2');
-   
-});
+ Route ::post('cdd/registrar', [DocenteController::class, 'store'])->name('registrar');
 
