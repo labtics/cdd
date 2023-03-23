@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DocenteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,4 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('cdd/datosgenerales', function () {
+
+  /*  $users = ['juan', 'pedro', 'maria' , 'ana'];-->*/
+    return view ('datosgenerales');
+   
+});
+
+Route::post('cdd/registrar', [DocenteController::class,'store'])->name('registrar');
 

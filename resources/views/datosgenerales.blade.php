@@ -40,10 +40,9 @@ Datos generales
     }
     </style> 
     <link rel="stylesheet" href="{{asset('css/tabs_modalidades.css')}}">
- 
 
-
-
+ <form action="{{ route('registrar')}}" method="post" >
+ @csrf
 <div class="tabset">
   <!-- Tab 1 -->
   <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
@@ -63,8 +62,6 @@ Datos generales
 
   <input type="radio" name="tabset" id="tab6" aria-controls="dunkles">
   <label for="tab6">Médicos</label>
-
-  
   
   <div class="tab-panels">
     <section id="marzen" class="tab-panel">
@@ -77,7 +74,7 @@ Datos generales
     <input type="text" id="nombre" name="nombre" placeholder="Nombre de empleado" class="form-control">
   
     <h4>Ingrese su apellido paterno </h4>
-     <input type="text" id="apellido_parteno" name="apellido_parteno" placeholder="Apellido paterno" class="form-control">
+     <input type="text" id="apellido_paterno" name="apellido_paterno" placeholder="Apellido paterno" class="form-control">
     
     <h4>Ingrese su apellido materno </h4>
     <input type="text" id="apellido_materno" name="apellido_materno" placeholder="Apellido materno" class="form-control">
@@ -85,24 +82,24 @@ Datos generales
     <h4>Ingrese su sexo </h4>
 
     <select name="sexo" id="sexo"> 
-      <option value="Femenino">Femenino</option>
-      <option value="Masculino">Masculino</option>
+      <option value="Mujer">Mujer</option>
+      <option value="Hombre">Hombre</option>
     </select>
     <h4>Ingrese su fecha de nacimiento </h4>
-    <input type="date" id="fecha_nacimiento" name="fechanacimiento" placeholder="Fecha de nacimiento" class="form-control">
+    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" placeholder="Fecha de nacimiento" class="form-control">
   
     <h4>Ingrese su edad </h4>
      <input type="number" id="edad" name="edad" placeholder="Edad" class="form-control">
     
     <h4>Ingrese su teléfono </h4>
-    <input type="number" id="telefono" name="telefono" placeholder="Numero de teléfono" class="form-control">
+    <input type="number" id="telefono1" name="telefono1" placeholder="Numero de teléfono" class="form-control">
   
     <h4>Ingrese su teléfono 2 </h4>
      <input type="number" id="telefono2" name="telefono2" placeholder="Numero de otro teléfono" class="form-control">
     
     <h4>Estado civil </h4>
     
-    <select name="estadocivil" id="estado_civil"> 
+    <select name="estado_civil" id="estado_civil"> 
       <option value="soltero"> Soltero(a)</option>
       <option value="casado"> Casado(a)</option>
       <option value="divorciado">Divorciado(a)</option>
@@ -110,8 +107,6 @@ Datos generales
       <option value="unionlibre"> Unión libre</option>
     </select>
 
-  
-  
     <h4>Ingrese su categoria </h4>
     <select name="categoria" id="categoria">
       <option value="eventual">Eventual</option>
@@ -120,52 +115,32 @@ Datos generales
 
     
     <h5>Seleccione su tipo de categoria</h5>
-        <select name="tipocategoria" id="tipo_categoria">
+        <select name="categoria_tipo" id="categoria_tipo">
           <option value="tiempocompleto"> Tiempo completo</option>
           <option value="asignaturaeventual"> Asignatura eventual</option>
           <option value="asignaturabase"> Asignatura base</option>
           <option value="mediotiempo"> Medio tiempo</option>
           <option value="tecnicoacademico"> Tecníco academico</option>
         </select>
-    
+  
     <h4>Ingrese su RFC </h4>
     <input type="text" id="rfc" name="rfc" placeholder="RFC" class="form-control">
   
     <h4>Ingrese su CURP </h4>
      <input type="text" id="curp" name="curp" placeholder="CURP" class="form-control">
 
-    
-     
      <div class="centrado" >
       <input type="submit" id="guardargenerales" value="Guardar"></input>
     
     </div>
-    
+
     </section>
     <section id="rauchbier" class="tab-panel">
       <h2>Datos Domiciliarios</h2> <!-- Inicia DATOS DOMICILIARIOS--> 
       <h4>Selecione su nacionalidad </h4>
       
-    <input type="number" id="telefono" name="telefono" placeholder="Numero de teléfono" class="form-control">
-  
-
-
-       <FORM action="#">
-        <LAbel for="" > </LAbel>
-
-       </FORM>
-
-      
-
-  
-  
-  
-     <div class="editar">
-         <input type="submit" id="editargenerales" value="Editar"></input>
-     </div>
-     
      <div class="centrado" >
-      <input type="submit" id="guardargenerales" value="Guardar"></input>
+      <input type="submit" id="guardargenerales" value="Guardar" class="btn btn-success "></input>
     
     </div>
     </section>
@@ -216,7 +191,7 @@ Datos generales
   </div>
   
 </div>
-
+</form>
 
 @endsection 
 

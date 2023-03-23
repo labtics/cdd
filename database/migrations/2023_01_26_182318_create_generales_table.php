@@ -28,7 +28,10 @@ return new class extends Migration
             $table->string('telefono1',10)->unique();
             $table->string('telefono2',10)->unique();
             $table->string('estado_civil',12);
-            $table->integer('categoria_id');
+
+            $table->string('categoria');
+            $table->string('categoria_tipo');
+
             $table->string('rfc')->unique();
             $table->string('curp')->unique();
             $table->timestamps();
