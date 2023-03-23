@@ -67,42 +67,43 @@ Datos generales
   
   
   <div class="tab-panels">
-    <section id="marzen" class="tab-panel">
+    <section id="marzen" class="tab-panel" required>
       <h2>Datos Generales</h2><!-- Inicia DATOS GENERALES--> 
       <br>
       <h4>Ingrese el número del empleado</h4>
-     <input type="text" id="empleado" name="empleado" placeholder="Numero de empleado" class="form-control">
+     <input type="text" id="empleado" name="empleado" placeholder="Número de empleado" class="form-control" required>
     
     <h4>Ingrese el nombre del empleado</h4>
-    <input type="text" id="nombre" name="nombre" placeholder="Nombre de empleado" class="form-control">
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre de empleado" class="form-control" required>
   
     <h4>Ingrese su apellido paterno </h4>
-     <input type="text" id="apellido_parteno" name="apellido_parteno" placeholder="Apellido paterno" class="form-control">
+     <input type="text" id="apellido_parteno" required name="apellido_parteno" placeholder="Apellido paterno" class="form-control" required>
     
     <h4>Ingrese su apellido materno </h4>
-    <input type="text" id="apellido_materno" name="apellido_materno" placeholder="Apellido materno" class="form-control">
+    <input type="text" id="apellido_materno" name="apellido_materno" placeholder="Apellido materno" class="form-control" required>
   
     <h4>Ingrese su sexo </h4>
 
-    <select name="sexo" id="sexo"> 
+    <select name="sexo" id="sexo" required>
+    <option value="Femenino">Sexo</option> 
       <option value="Femenino">Femenino</option>
       <option value="Masculino">Masculino</option>
     </select>
     <h4>Ingrese su fecha de nacimiento </h4>
-    <input type="date" id="fecha_nacimiento" name="fechanacimiento" placeholder="Fecha de nacimiento" class="form-control">
+    <input type="date" id="fecha_nacimiento" name="fechanacimiento" placeholder="Fecha de nacimiento" class="form-control" required>
   
     <h4>Ingrese su edad </h4>
-     <input type="number" id="edad" name="edad" placeholder="Edad" class="form-control">
+     <input type="number" id="edad" name="edad" placeholder="Edad" class="form-control" required>
     
     <h4>Ingrese su teléfono </h4>
-    <input type="number" id="telefono" name="telefono" placeholder="Numero de teléfono" class="form-control">
+    <input type="number" id="telefono1" name="telefono" placeholder="Numero de teléfono" class="form-control" required>
   
     <h4>Ingrese su teléfono 2 </h4>
-     <input type="number" id="telefono2" name="telefono2" placeholder="Numero de otro teléfono" class="form-control">
+     <input type="number" id="telefono2" name="telefono2" placeholder="Numero de otro teléfono" class="form-control" required>
     
     <h4>Estado civil </h4>
     
-    <select name="estadocivil" id="estado_civil"> 
+    <select name="estado_civil" id="estado_civil" required> 
       <option value="soltero"> Soltero(a)</option>
       <option value="casado"> Casado(a)</option>
       <option value="divorciado">Divorciado(a)</option>
@@ -113,14 +114,14 @@ Datos generales
   
   
     <h4>Ingrese su categoria </h4>
-    <select name="categoria" id="categoria">
+    <select name="categoria" id="categoria" required>
       <option value="eventual">Eventual</option>
       <option value="base">Base</option>
     </select>
-
+<!---->
     
     <h5>Seleccione su tipo de categoria</h5>
-        <select name="tipocategoria" id="tipo_categoria">
+        <select name="categoria_tipo" id="categoria_tipo" required>
           <option value="tiempocompleto"> Tiempo completo</option>
           <option value="asignaturaeventual"> Asignatura eventual</option>
           <option value="asignaturabase"> Asignatura base</option>
@@ -129,90 +130,234 @@ Datos generales
         </select>
     
     <h4>Ingrese su RFC </h4>
-    <input type="text" id="rfc" name="rfc" placeholder="RFC" class="form-control">
+    <input type="text" id="rfc" name="rfc" placeholder="RFC" class="form-control" required>
   
     <h4>Ingrese su CURP </h4>
-     <input type="text" id="curp" name="curp" placeholder="CURP" class="form-control">
+     <input type="text" id="curp" name="curp" placeholder="CURP" class="form-control" required>
 
     
      
      <div class="centrado" >
-      <input type="submit" id="guardargenerales" value="Guardar"></input>
+      <input type="submit" id="guardargenerales" value="Guardar" required></input>
     
     </div>
     
     </section>
-    <section id="rauchbier" class="tab-panel">
+    <section id="rauchbier" class="tab-panel" required>
       <h2>Datos Domiciliarios</h2> <!-- Inicia DATOS DOMICILIARIOS--> 
+      
       <h4>Selecione su nacionalidad </h4>
+   
+    <select name="nacionalidad" id="nacionalidad" required>
       
-    <input type="number" id="telefono" name="telefono" placeholder="Numero de teléfono" class="form-control">
-  
+       <option value="mexicano">Mexicano(a)</option> 
 
+       <option value="extranjero">Extranjero(a)</option>
+    </select>  
+     <p></p> 
+    <input type="text" id="tiponacionalidad" placeholder="Escriba su nacionalidad" class="form-control"> 
 
-       <FORM action="#">
-        <LAbel for="" > </LAbel>
+    <h4>Seleccione su estado</h4>
+    <select name="estado" id="estado" required>
+        <option value=""> Selecciona tu estado</option>
+    </select>
 
-       </FORM>
+    <h4>Seleccione su municipio</h4>
+      <select name="municipio" id="municipio"required>
+        <option value=""> Selecciona tu municipio</option>
+      </select>
 
+    <h4>Ingresa tu calle</h4>
+      <input type="text" id="calle" placeholder="Ingrese su calle" required class="form-control">
+
+    <h4>Ingresa tu colonia</h4>
+      <input type="text" id="colonia" placeholder="Ingrese su colonia" required class="form-control">
+
+      <h4>Ingresa tu codigo postal</h4>
+      <input type="number" id="cp" placeholder="Ingrese su codigo postal" required class="form-control">
+
+    <h4>Ingresa tu número interior o exterior</h4>
+      <input type="number" id="numerointerior" placeholder="Ingrese su número interior o exterior" required class="form-control">
+
+      <div class="centrado" >
+      <input type="submit" id="guardardomiciliarios" value="Guardar" required></input>
+    
+    </div>
+    
+    </section>
+      <section id="dunkles" class="tab-panel" required>
       
+    <h2>Datos Laborales de otra dependencia</h2> <!-- Inicia DATOS DE OTRA DEPENDENCIA--> 
+    
 
-  
-  
-  
-     <div class="editar">
-         <input type="submit" id="editargenerales" value="Editar"></input>
-     </div>
+    <h4>Nombre de la dependencia</h4>
+     <input type="text" id="dependencia" placeholder="Ingrese su dependencia" required class="form-control">
+
+    <h4>Dirección de la dependencia</h4>
+     <input type="text" id="direccion_dependencia" placeholder="Dirección de la dependencia" required class="form-control">
+
+     <h4>Horarios</h4>
+     <input type="text" id="horarios" placeholder="Horario" required class="form-control">
      
+    <h4>Días laborales</h4>
+    <div>
+       <input type="checkbox" id="diaslaborales" name="scales"  >
+       <label for="scales">Lunes</label>
+    </div>
+    <div>
+       <input type="checkbox" id="diaslaborales" name="scales"  >
+       <label for="scales">Martes</label>
+    </div>
+    <div>
+       <input type="checkbox" id="diaslaborales" name="scales" >
+       <label for="scales">Miercoles</label>
+    </div>
+    <div>
+       <input type="checkbox" id="diaslaborales" name="scales" >
+       <label for="scales">Jueves</label>
+    </div>
+    <div>
+       <input type="checkbox" id="diaslaborales" name="scales">
+       <label for="scales">Viernes</label>
+    </div>
+    <div>
+       <input type="checkbox" id="diaslaborales" name="scales" >
+       <label for="scales">Sabado</label>
+    </div>
+    <div>
+       <input type="checkbox" id="diaslaborales" name="scales" >
+       <label for="scales">Domingo</label>
+    </div>
+
+     
+
+    <h4>Nombre del jefe</h4>
+     <input type="text" id="nombre_jefe" placeholder="Nombre del jefe" required class="form-control">
+
+    <h4>Teléfono de la dependencia</h4>
+     <input type="text" id="telefono_dependencia" placeholder="Teléfono de la dependencia" required class="form-control">
+      
      <div class="centrado" >
-      <input type="submit" id="guardargenerales" value="Guardar"></input>
+      <input type="submit" id="guardardependencia" value="Guardar" required></input>
+    
+    </div>
+  
+  </section>
+    <section id="dunkles" class="tab-panel" required class="form-control">
+
+
+    
+     
+     <h2> Datos Academicos</h2> <!-- Inicia DATOS ACADEMICOS--> 
+    
+    <h4>Ingrese su grado academico</h4>
+     <input type="text" id="grado_academico" placeholder="Ingrese su grado academico" required class="form-control">
+
+    <h4>Ingrese título</h4>
+     <input type="text" id="titulo" placeholder="Ingrese su titulo" required class="form-control">
+
+    <h4>Ingrese su cedula</h4>
+     <input type="text" id="cedula" placeholder="Ingrese su cedula" required class="form-control">
+
+    <h4>Ingrese estatus</h4>
+
+      <div>
+       <input type="checkbox" id="estatus" name="scales" >
+       <label for="scales">En proceso</label>
+      </div>
+      <div>
+       <input type="checkbox" id="estatus" name="scales">
+       <label for="scales">Finalizado</label>
+      </div>
+
+
+
+
+      <p>
+        <h4 for="videoFile">Carga tu título en PDF:</h4>
+       <input type="file" id="file" accept="file/*">
+      </p>
+<p>
+  <h4 for="videoFile">Carga tu Cedula:</h4>
+  <input type="file" id="file" accept="file/*">
+</p>
+
+    <div class="centrado" >
+      <input type="submit" id="guardaracademicos" value="Guardar" required></input>
+    
+    </div>
+     </section>
+     <section id="dunkles" class="tab-panel" required>
+
+     
+    </div>
+    <h2>Producción academica</h2> <!-- Inicia PRODUCCION ACADEMICA--> 
+      <br>
+    
+      <!--en espera de instrucciónes-->
+    <h4>Ingrese nombre del evento asistidos</h4>
+     <input type="text" id="evento" placeholder="Ingrese nombre del evento asistidos" required class="form-control">
+
+    <h4>Ingrese la fecha </h4>
+      <input type="date" id="Fecha_evento" name="fecha_evento" placeholder="Fecha del evento" class="form-control" required>
+      
+    <h4>Ingrese la fecha </h4>
+      <input type="date" id="Fecha_evento" name="fecha_evento" placeholder="Fecha del evento" class="form-control" required>
+  
+
+    <h4>Ingrese nombre de la institución</h4>
+     <input type="text" id="institucion" placeholder="Ingrese nombre de la institución" required class="form-control">
+
+
+    <h4>Ingrese nombre del evento impartdo</h4>
+     <input type="text" id="cedula" placeholder="Ingrese nombre del evento asistidos" required class="form-control">
+
+
+     <div class="centrado" >
+      <input type="submit" id="guardargenerales" value="Guardar" required></input>
     
     </div>
     </section>
-    <section id="dunkles" class="tab-panel">
-      <h2>Exámenes Generales para el Egreso de la Licenciatura (EGEL)</h2>
+    <section id="dunkles" class="tab-panel" required>
+  <h2>Datos Medicos</h2> <!-- Inicia DATOS MEDICOS--> 
       <br>
-      Los EGEL son instrumentos de evaluación estandarizados que tienen como propósito 
-      evaluar los conocimientos y habilidades de un recién egresado. Son pruebas objetivas 
-      con un referente de calificación criterial. Estos instrumentos miden el nivel de logro 
-      de un sustentante con respecto a un estándar especializado por licenciatura.
+    <h4>Ingrese su número de seguro social</h4>
+     <input type="text" id="nss" placeholder="Ingrese su número de seguro social" required class="form-control">
+
+    <h4>Alergías</h4>
+     <input type="text" id="alergias" placeholder="Alergias" required class="form-control">
+
+    <h4>Patologías</h4>
+     <input type="text" id="alergias" placeholder="Patologías" required class="form-control">
+ 
+     
+     <h4>Tipos de sangre</h4>
+    <select name="tipo_sangre" id="tipo_sangre" required> 
+      <option value="">Seleccione el tipo de sangre</option>
+      <option value="a+"> A+</option>
+      <option value="a-">A-</option>
+      <option value="b+"> B+</option>
+      <option value="b-">B-</option>
+      <option value="ab+"> AB+</option>
+      <option value="ab-"> AB-</option>
+      <option value="o+">O+</option>
+      <option value="o-"> O-</option>
+      
+    </select>
+
+    <h4>Nombre de contaco de emergencia</h4>
+     <input type="text" id="nombre_contacto_emergencia" placeholder="Nombre de contacto de emergencia" required class="form-control">
+
+    <h4>Número de contaco de emergencia</h4>
+     <input type="number" id="nombre_contacto_emergencia" placeholder="Número de contacto de emergencia" required class="form-control">
+
+     <div class="centrado" >
+      <input type="submit" id="guardargenerales" value="Guardar" required></input>
+    
+    </div>
+
     </section>
-    <section id="dunkles" class="tab-panel">
-    <h2>Estudios de Maestría</h2>
-      <br>
-      Esta opción consiste en la acreditación del cuarenta por ciento de créditos como mínimo, del 
-      total de créditos del plan de estudios de posgrado, ya sea maestría o doctorado en alguna Institución Educativa 
-      de nivel superior nacional o extranjera que posea reconocimiento oficial por parte de la Dirección General de Profesiones,
-      dependiente de la Secretaría de Educación Pública. 
-    </section>
-    <section id="dunkles" class="tab-panel">
-    <h2>Por Promedio</h2>
-      <br>
-      Consiste en la titulación sin réplica del examen profesional debiendo cumplir con los requisitos establecidos en este reglamento, 
-      teniendo como finalidad motivar en el alumno o egresado el hábito de superación constante durante el trayecto de la licenciatura,
-       factor determinante en su proyección profesional.
-    </section>
-    <section id="dunkles" class="tab-panel">
-    <h2>Artículo Publicado</h2>
-      <br>
-      Consiste en la titulación sin réplica del examen profesional debiendo cumplir con los requisitos establecidos en este reglamento, 
-      teniendo como finalidad motivar en el alumno o egresado el hábito de superación constante durante el trayecto de la licenciatura,
-       factor determinante en su proyección profesional.
-    </section>
-    <section id="dunkles" class="tab-panel">
-    <h2>Diplomado</h2>
-      <br>
-      Consiste en la asistencia, participación activa y aprobación de los egresados a un diplomado acorde a su licenciatura, con la 
-      intervención de catedráticos y/o profesionales de reconocido prestigio, organizado por la División Académica correspondiente.
-       El diplomado deberá estar integrado por un mínimo de ciento veinte horas con un valor de quince a diecisiete créditos. En el 
-       transcurso o término del diplomado el egresado deberá elaborar un trabajo documental escrito individual acorde a lo impartido,
-      el cual presentará y defenderá durante el examen profesional.  
-    </section>
-    <section id="dunkles" class="tab-panel">
-    <h2>Solución de Problemas</h2>
-      <br>
-     En revisión 
-    </section>
+   
   </div>
   
 </div>

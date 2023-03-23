@@ -15,28 +15,28 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('cdd/iniciosesion', function () {
 
-  /*  $users = ['juan', 'pedro', 'maria' , 'ana'];-->*/
+ 
     return view ('iniciosesion');
    
 });
 
 Route::get('cdd/principal', function () {
 
-  /*  $users = ['juan', 'pedro', 'maria' , 'ana'];-->*/
     return view ('principal');
    
 });
 
 Route::get('cdd/datosgenerales', function () {
 
-  /*  $users = ['juan', 'pedro', 'maria' , 'ana'];-->*/
+ 
     return view ('datosgenerales');
    
 });
 
 Route::get('cdd/vista2', function () {
 
-  /*  $users = ['juan', 'pedro', 'maria' , 'ana'];-->*/
+  
     return view ('vista2');
    
 });
+
