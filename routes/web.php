@@ -18,7 +18,7 @@ Route::get('cdd/datosgenerales', function () {
 
   /*  $users = ['juan', 'pedro', 'maria' , 'ana'];-->*/
     return view ('datosgenerales');
-   
+    
 });
 
 Route::post('cdd/registrar', [DocenteController::class,'store'])->name('registrar');
