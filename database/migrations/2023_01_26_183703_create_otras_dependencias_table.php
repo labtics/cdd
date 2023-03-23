@@ -13,16 +13,21 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('datos_otra_depen', function (Blueprint $table) {
-            $table->increments('id');
-            $table->foreign('dato_general_id')->references('id')->on('datos_generales');
-            $table->string('Nombre_depen');
+        Schema::create('otras_dependencias', function (Blueprint $table) {
+
+            $table->engine = 'InnoDB';
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id');
+            $table->string('nombre_depen');
             $table->string('direccion_depen');
             $table->string('horarios');
             $table->string('dias_laborales');
             $table->string('nombre_jefe');
             $table->string('telefono_depen');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
         });
     }
 
@@ -33,6 +38,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('datos_otra_depen');
+        Schema::dropIfExists('otras_dependencias');
     }
 };

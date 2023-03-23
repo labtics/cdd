@@ -13,9 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('productividad_acade', function (Blueprint $table) {
-            $table->id();
+        Schema::create('asignaturas_generales', function (Blueprint $table) {
+
+            $table->engine = 'InnoDB';
+            $table->bigIncrements('id');
+            $table->string('clave');
+            $table->string('nombre');
             $table->timestamps();
+            
         });
     }
 
@@ -26,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('productividad_acade');
+        Schema::dropIfExists('asignaturas_generales');
     }
 };

@@ -13,14 +13,21 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('municipios', function (Blueprint $table) {
+        Schema::create('prod_academicas', function (Blueprint $table) {
 
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('estado_id');
-            $table->string('nombre');
+            $table->unsignedBigInteger('user_id');
+            $table->integer('Evento_p');
+            $table->string('Nombre_eventoP');
+            $table->string('Fecha_eventoP');
+            $table->date('Fecha_evento');
+            $table->string('institucion');
             $table->timestamps();
-            $table->foreign('estado_id')->references('id')->on('estados');
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
+
             
         });
     }
@@ -32,6 +39,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('municipios');
+        Schema::dropIfExists('prod_academicas');
     }
 };

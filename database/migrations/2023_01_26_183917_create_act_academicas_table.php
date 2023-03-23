@@ -13,13 +13,19 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('actualizacion_acade', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('Evento');
+        Schema::create('act_academicas', function (Blueprint $table) {
+
+            $table->engine = 'InnoDB';
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id');
+            $table->string('evento');
             $table->string('nombre_even');
             $table->string('fecha_even');
             $table->string('institucion_a');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
         });
     }
 
@@ -30,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('actualizacion_acade');
+        Schema::dropIfExists('act_academicas');
     }
 };

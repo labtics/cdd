@@ -13,17 +13,21 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('expe_prof_docente', function (Blueprint $table) {
-            $table->increments('id');
-            $table->foreign('dato_general_id')->references('id')->on('datos_generales');
+        Schema::create('expro_docentes', function (Blueprint $table) {
+
+            $table->engine = 'InnoDB';
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id');
             $table->string('programa_edu');
             $table->string('id_asignatura');
             $table->string('id_asignatura_g');
-            $table->string('Ciclo_esc');
-            $table->binary('Recoocimiento');
-            $table->string('cuaerpo_aca');
+            $table->string('ciclo_escolar');
+            $table->binary('reconocimiento');
+            $table->string('cuerpo_aca');
             $table->string('Grupo_aca');
             $table->timestamps();
+            
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -34,6 +38,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('expe_prof_docente');
+        Schema::dropIfExists('expro_docentes');
     }
 };

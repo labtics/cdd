@@ -13,15 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('datos_domiciliares', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('nacionalidad');
-            $table->integer('id_estado');
-            $table->integer('id_municipio');
-            $table->string('calle');
-            $table->string('colonia');
-            $table->integer('codigo_P');
-            $table->string('num_ex_in');
+        Schema::create('categorias', function (Blueprint $table) {
+            
+            $table->engine = 'InnoDB';
+            $table->bigIncrements('id');
+            $table->string('nombre',50);
             $table->timestamps();
             
         });
@@ -34,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('datos_domiciliares');
+        Schema::dropIfExists('categorias');
     }
 };

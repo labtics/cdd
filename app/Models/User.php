@@ -18,9 +18,11 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'id',
+        'empleado',
         'name',
         'email',
-        'password',
+        'password'
     ];
 
     /**
@@ -41,4 +43,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+        //Un usuario tiene un dato General
+        public function general()
+        {
+            return $this->hasOne('App\Models\General');
+        }
 }

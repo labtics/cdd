@@ -40,10 +40,9 @@ Datos generales
     }
     </style> 
     <link rel="stylesheet" href="{{asset('css/tabs_modalidades.css')}}">
- 
 
-
-
+ <form action="{{ route('registrar')}}" method="post" >
+ @csrf
 <div class="tabset">
   <!-- Tab 1 -->
   <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
@@ -63,8 +62,6 @@ Datos generales
 
   <input type="radio" name="tabset" id="tab6" aria-controls="dunkles">
   <label for="tab6">Médicos</label>
-
-  
   
   <div class="tab-panels">
     <section id="marzen" class="tab-panel" required>
@@ -77,33 +74,32 @@ Datos generales
     <input type="text" id="nombre" name="nombre" placeholder="Nombre de empleado" class="form-control" required>
   
     <h4>Ingrese su apellido paterno </h4>
-     <input type="text" id="apellido_parteno" required name="apellido_parteno" placeholder="Apellido paterno" class="form-control" required>
+     <input type="text" id="apellido_parteno" name="apellido_parteno" placeholder="Apellido paterno" class="form-control">
     
     <h4>Ingrese su apellido materno </h4>
     <input type="text" id="apellido_materno" name="apellido_materno" placeholder="Apellido materno" class="form-control" required>
   
     <h4>Ingrese su sexo </h4>
 
-    <select name="sexo" id="sexo" required>
-    <option value="Femenino">Sexo</option> 
+    <select name="sexo" id="sexo"> 
       <option value="Femenino">Femenino</option>
       <option value="Masculino">Masculino</option>
     </select>
     <h4>Ingrese su fecha de nacimiento </h4>
-    <input type="date" id="fecha_nacimiento" name="fechanacimiento" placeholder="Fecha de nacimiento" class="form-control" required>
+    <input type="date" id="fecha_nacimiento" name="fechanacimiento" placeholder="Fecha de nacimiento" class="form-control">
   
     <h4>Ingrese su edad </h4>
      <input type="number" id="edad" name="edad" placeholder="Edad" class="form-control" required>
     
     <h4>Ingrese su teléfono </h4>
-    <input type="number" id="telefono1" name="telefono" placeholder="Numero de teléfono" class="form-control" required>
+    <input type="number" id="telefono" name="telefono" placeholder="Numero de teléfono" class="form-control">
   
     <h4>Ingrese su teléfono 2 </h4>
      <input type="number" id="telefono2" name="telefono2" placeholder="Numero de otro teléfono" class="form-control" required>
     
     <h4>Estado civil </h4>
     
-    <select name="estado_civil" id="estado_civil" required> 
+    <select name="estadocivil" id="estado_civil"> 
       <option value="soltero"> Soltero(a)</option>
       <option value="casado"> Casado(a)</option>
       <option value="divorciado">Divorciado(a)</option>
@@ -111,8 +107,6 @@ Datos generales
       <option value="unionlibre"> Unión libre</option>
     </select>
 
-  
-  
     <h4>Ingrese su categoria </h4>
     <select name="categoria" id="categoria" required>
       <option value="eventual">Eventual</option>
@@ -121,19 +115,19 @@ Datos generales
 <!---->
     
     <h5>Seleccione su tipo de categoria</h5>
-        <select name="categoria_tipo" id="categoria_tipo" required>
+        <select name="tipocategoria" id="tipo_categoria">
           <option value="tiempocompleto"> Tiempo completo</option>
           <option value="asignaturaeventual"> Asignatura eventual</option>
           <option value="asignaturabase"> Asignatura base</option>
           <option value="mediotiempo"> Medio tiempo</option>
           <option value="tecnicoacademico"> Tecníco academico</option>
         </select>
-    
+  
     <h4>Ingrese su RFC </h4>
     <input type="text" id="rfc" name="rfc" placeholder="RFC" class="form-control" required>
   
     <h4>Ingrese su CURP </h4>
-     <input type="text" id="curp" name="curp" placeholder="CURP" class="form-control" required>
+     <input type="text" id="curp" name="curp" placeholder="CURP" class="form-control">
 
     
      
@@ -141,7 +135,7 @@ Datos generales
       <input type="submit" id="guardargenerales" value="Guardar" required></input>
     
     </div>
-    
+
     </section>
     <section id="rauchbier" class="tab-panel" required>
       <h2>Datos Domiciliarios</h2> <!-- Inicia DATOS DOMICILIARIOS--> 
@@ -150,95 +144,26 @@ Datos generales
    
     <select name="nacionalidad" id="nacionalidad" required>
       
-       <option value="mexicano">Mexicano(a)</option> 
+    <input type="number" id="telefono" name="telefono" placeholder="Numero de teléfono" class="form-control">
+  
 
-       <option value="extranjero">Extranjero(a)</option>
-    </select>  
-     <p></p> 
-    <input type="text" id="tiponacionalidad" placeholder="Escriba su nacionalidad" class="form-control"> 
 
-    <h4>Seleccione su estado</h4>
-    <select name="estado" id="estado" required>
-        <option value=""> Selecciona tu estado</option>
-    </select>
+       <FORM action="#">
+        <LAbel for="" > </LAbel>
 
-    <h4>Seleccione su municipio</h4>
-      <select name="municipio" id="municipio"required>
-        <option value=""> Selecciona tu municipio</option>
-      </select>
+       </FORM>
 
-    <h4>Ingresa tu calle</h4>
-      <input type="text" id="calle" placeholder="Ingrese su calle" required class="form-control">
-
-    <h4>Ingresa tu colonia</h4>
-      <input type="text" id="colonia" placeholder="Ingrese su colonia" required class="form-control">
-
-      <h4>Ingresa tu codigo postal</h4>
-      <input type="number" id="cp" placeholder="Ingrese su codigo postal" required class="form-control">
-
-    <h4>Ingresa tu número interior o exterior</h4>
-      <input type="number" id="numerointerior" placeholder="Ingrese su número interior o exterior" required class="form-control">
-
-      <div class="centrado" >
-      <input type="submit" id="guardardomiciliarios" value="Guardar" required></input>
-    
-    </div>
-    
-    </section>
-      <section id="dunkles" class="tab-panel" required>
       
-    <h2>Datos Laborales de otra dependencia</h2> <!-- Inicia DATOS DE OTRA DEPENDENCIA--> 
-    
 
-    <h4>Nombre de la dependencia</h4>
-     <input type="text" id="dependencia" placeholder="Ingrese su dependencia" required class="form-control">
-
-    <h4>Dirección de la dependencia</h4>
-     <input type="text" id="direccion_dependencia" placeholder="Dirección de la dependencia" required class="form-control">
-
-     <h4>Horarios</h4>
-     <input type="text" id="horarios" placeholder="Horario" required class="form-control">
+  
+  
+  
+     <div class="editar">
+         <input type="submit" id="editargenerales" value="Editar"></input>
+     </div>
      
-    <h4>Días laborales</h4>
-    <div>
-       <input type="checkbox" id="diaslaborales" name="scales"  >
-       <label for="scales">Lunes</label>
-    </div>
-    <div>
-       <input type="checkbox" id="diaslaborales" name="scales"  >
-       <label for="scales">Martes</label>
-    </div>
-    <div>
-       <input type="checkbox" id="diaslaborales" name="scales" >
-       <label for="scales">Miercoles</label>
-    </div>
-    <div>
-       <input type="checkbox" id="diaslaborales" name="scales" >
-       <label for="scales">Jueves</label>
-    </div>
-    <div>
-       <input type="checkbox" id="diaslaborales" name="scales">
-       <label for="scales">Viernes</label>
-    </div>
-    <div>
-       <input type="checkbox" id="diaslaborales" name="scales" >
-       <label for="scales">Sabado</label>
-    </div>
-    <div>
-       <input type="checkbox" id="diaslaborales" name="scales" >
-       <label for="scales">Domingo</label>
-    </div>
-
-     
-
-    <h4>Nombre del jefe</h4>
-     <input type="text" id="nombre_jefe" placeholder="Nombre del jefe" required class="form-control">
-
-    <h4>Teléfono de la dependencia</h4>
-     <input type="text" id="telefono_dependencia" placeholder="Teléfono de la dependencia" required class="form-control">
-      
      <div class="centrado" >
-      <input type="submit" id="guardardependencia" value="Guardar" required></input>
+      <input type="submit" id="guardargenerales" value="Guardar"></input>
     
     </div>
   
@@ -361,7 +286,7 @@ Datos generales
   </div>
   
 </div>
-
+</form>
 
 @endsection 
 
