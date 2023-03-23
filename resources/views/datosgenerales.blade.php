@@ -137,8 +137,50 @@ Datos generales
     
     </div>
 
+    </section>
+
     
-  
+      <h2>Datos Domiciliarios</h2> <!-- Inicia DATOS DOMICILIARIOS--> 
+      
+      <h4>Selecione su nacionalidad </h4>
+   
+    <select name="nacionalidad" id="nacionalidad" >
+      
+       <option value="mexicano">Mexicano(a)</option> 
+
+       <option value="extranjero">Extranjero(a)</option>
+    </select>  
+     <p></p> 
+    <input type="text" id="tiponacionalidad" placeholder="Escriba su nacionalidad" class="form-control"> 
+
+    <h4>Seleccione su estado</h4>
+    <select name="estado" id="estado" >
+        <option value=""> Selecciona tu estado</option>
+    </select>
+
+    <h4>Seleccione su municipio</h4>
+      <select name="municipio" id="municipio">
+        <option value=""> Selecciona tu municipio</option>
+      </select>
+
+    <h4>Ingresa tu calle</h4>
+      <input type="text" id="calle" placeholder="Ingrese su calle" class="form-control">
+
+    <h4>Ingresa tu colonia</h4>
+      <input type="text" id="colonia" placeholder="Ingrese su colonia"  class="form-control">
+
+      <h4>Ingresa tu codigo postal</h4>
+      <input type="number" id="cp" placeholder="Ingrese su codigo postal" class="form-control">
+
+    <h4>Ingresa tu número interior o exterior</h4>
+      <input type="number" id="numerointerior" placeholder="Ingrese su número interior o exterior"  class="form-control">
+
+      <div class="centrado" >
+      <input type="submit" id="guardardomiciliarios" value="Guardar" ></input>
+    
+    </div>
+    
+    </section>
 </div>
 </form>
 
