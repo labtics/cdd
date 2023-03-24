@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 use App\Models\General;
 
-class Domicilio extends Model
+class Domiciliar extends Model
 {
     use HasFactory;
     protected $table='domicilios';
-    protected $fillable = ['id','nacionalidad','estado_id','municipio_id',
+    protected $fillable = ['id','user_id','nacionalidad','estado_id','municipio_id',
     'calle','colonia','codigo_postal','num_ex_int'];
 
     //Un domicilio corresponde a 1 maestro

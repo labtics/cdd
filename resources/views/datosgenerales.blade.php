@@ -130,8 +130,7 @@ Datos generales
     <h4>Ingrese su CURP </h4>
      <input type="text" id="curp" name="curp" placeholder="CURP" class="form-control">
 
-    
-     
+
      <div class="centrado" >
       <input type="submit" id="guardargenerales" value="Guardar" required></input>
     
@@ -139,7 +138,6 @@ Datos generales
 
     </section>
 
-    
       <h2>Datos Domiciliarios</h2> <!-- Inicia DATOS DOMICILIARIOS--> 
       
       <h4>Selecione su nacionalidad </h4>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\General;
 use App\Models\User;
+use App\Models\Domiciliar;
 
 use \DB;
 
@@ -48,7 +49,9 @@ class DocenteController extends Controller
         $general->user_id=$user_id;
         $general->saveOrFail();
 
-        //corregir base de datos...
+        $domiciliar = new Domiciliar($request->all());
+        $domiciliar->user_id=$user_id;
+        $domiciliar->saveOrFail();
 
 
     }
