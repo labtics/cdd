@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\General;
 use App\Models\User;
+use App\Http\Requests\RequestDocente;
 
 use \DB;
 
@@ -36,7 +37,7 @@ class DocenteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RequestDocente $request)
     {
 
         $general = new General($request->all());
@@ -52,5 +53,7 @@ class DocenteController extends Controller
 
 
     }
+
+
 
 }
