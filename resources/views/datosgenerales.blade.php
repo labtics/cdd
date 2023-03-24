@@ -67,18 +67,20 @@ Datos generales
   <div class="tab-panels">
     <section id="marzen" class="tab-panel" required>
       <h2>Datos Generales</h2><!-- Inicia DATOS GENERALES--> 
+      @include('layouts.mensajes')
+
       <br>
       <h4>Ingrese el número del empleado</h4>
-     <input type="text" id="empleado" name="empleado" placeholder="Número de empleado" class="form-control" required>
+     <input type="text" id="empleado" name="empleado" placeholder="Número de empleado" class="form-control" >
     
     <h4>Ingrese el nombre del empleado</h4>
-    <input type="text" id="nombre" name="nombre" placeholder="Nombre de empleado" class="form-control" required>
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre de empleado" class="form-control" >
   
     <h4>Ingrese su apellido paterno </h4>
      <input type="text" id="apellido_paterno" name="apellido_paterno" placeholder="Apellido paterno" class="form-control">
     
     <h4>Ingrese su apellido materno </h4>
-    <input type="text" id="apellido_materno" name="apellido_materno" placeholder="Apellido materno" class="form-control" required>
+    <input type="text" id="apellido_materno" name="apellido_materno" placeholder="Apellido materno" class="form-control" >
   
     <h4>Ingrese su sexo </h4>
 
@@ -90,13 +92,13 @@ Datos generales
     <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" placeholder="Fecha de nacimiento" class="form-control">
   
     <h4>Ingrese su edad </h4>
-     <input type="number" id="edad" name="edad" placeholder="Edad" class="form-control" required>
+     <input type="number" id="edad" name="edad" placeholder="Edad" class="form-control" >
     
     <h4>Ingrese su teléfono </h4>
     <input type="number" id="telefono1" name="telefono1" placeholder="Numero de teléfono" class="form-control">
   
     <h4>Ingrese su teléfono 2 </h4>
-     <input type="number" id="telefono2" name="telefono2" placeholder="Numero de otro teléfono" class="form-control" required>
+     <input type="number" id="telefono2" name="telefono2" placeholder="Numero de otro teléfono" class="form-control" >
     
     <h4>Estado civil </h4>
     
@@ -109,7 +111,7 @@ Datos generales
     </select>
 
     <h4>Ingrese su categoria </h4>
-    <select name="categoria" id="categoria" required>
+    <select name="categoria" id="categoria" >
       <option value="eventual">Eventual</option>
       <option value="base">Base</option>
     </select>
@@ -125,19 +127,19 @@ Datos generales
         </select>
   
     <h4>Ingrese su RFC </h4>
-    <input type="text" id="rfc" name="rfc" placeholder="RFC" class="form-control" required>
+    <input type="text" id="rfc" name="rfc" placeholder="RFC" class="form-control" >
   
     <h4>Ingrese su CURP </h4>
      <input type="text" id="curp" name="curp" placeholder="CURP" class="form-control">
 
 
      <div class="centrado" >
-      <input type="submit" id="guardargenerales" value="Guardar" required></input>
+      <input type="submit" id="guardargenerales" value="Guardar" ></input>
     
     </div>
 
     </section>
-
+    <section id="rauchbier" class="tab-panel" >
       <h2>Datos Domiciliarios</h2> <!-- Inicia DATOS DOMICILIARIOS--> 
       
       <h4>Selecione su nacionalidad </h4>
@@ -162,13 +164,13 @@ Datos generales
       </select>
 
     <h4>Ingresa tu calle</h4>
-      <input type="text" id="calle" placeholder="Ingrese su calle" class="form-control">
+      <input type="text" id="calle" placeholder="Ingrese su calle"  class="form-control">
 
     <h4>Ingresa tu colonia</h4>
-      <input type="text" id="colonia" placeholder="Ingrese su colonia"  class="form-control">
+      <input type="text" id="colonia" placeholder="Ingrese su colonia" class="form-control">
 
       <h4>Ingresa tu codigo postal</h4>
-      <input type="number" id="cp" placeholder="Ingrese su codigo postal" class="form-control">
+      <input type="number" id="cp" placeholder="Ingrese su codigo postal"  class="form-control">
 
     <h4>Ingresa tu número interior o exterior</h4>
       <input type="number" id="numerointerior" placeholder="Ingrese su número interior o exterior"  class="form-control">
@@ -179,8 +181,180 @@ Datos generales
     </div>
     
     </section>
+      <section id="dunkles" class="tab-panel" >
+      
+    <h2>Datos Laborales de otra dependencia</h2> <!-- Inicia DATOS DE OTRA DEPENDENCIA--> 
+    
+
+    <h4>Nombre de la dependencia</h4>
+     <input type="text" id="dependencia" placeholder="Ingrese su dependencia"  class="form-control">
+
+    <h4>Dirección de la dependencia</h4>
+     <input type="text" id="direccion_dependencia" placeholder="Dirección de la dependencia"  class="form-control">
+
+     <h4>Horarios</h4>
+     <input type="text" id="horarios" placeholder="Horario"  class="form-control">
+     
+    <h4>Días laborales</h4>
+    <div>
+       <input type="checkbox" id="diaslaborales" name="scales"  >
+       <label for="scales">Lunes</label>
+    </div>
+    <div>
+       <input type="checkbox" id="diaslaborales" name="scales"  >
+       <label for="scales">Martes</label>
+    </div>
+    <div>
+       <input type="checkbox" id="diaslaborales" name="scales" >
+       <label for="scales">Miercoles</label>
+    </div>
+    <div>
+       <input type="checkbox" id="diaslaborales" name="scales" >
+       <label for="scales">Jueves</label>
+    </div>
+    <div>
+       <input type="checkbox" id="diaslaborales" name="scales">
+       <label for="scales">Viernes</label>
+    </div>
+    <div>
+       <input type="checkbox" id="diaslaborales" name="scales" >
+       <label for="scales">Sabado</label>
+    </div>
+    <div>
+       <input type="checkbox" id="diaslaborales" name="scales" >
+       <label for="scales">Domingo</label>
+    </div>
+
+     
+
+    <h4>Nombre del jefe</h4>
+     <input type="text" id="nombre_jefe" placeholder="Nombre del jefe"  class="form-control">
+
+    <h4>Teléfono de la dependencia</h4>
+     <input type="text" id="telefono_dependencia" placeholder="Teléfono de la dependencia"  class="form-control">
+      
+     <div class="centrado" >
+      <input type="submit" id="guardardependencia" value="Guardar"></input>
+    
+    </div>
+  
+  </section>
+    <section id="dunkles" class="tab-panel" class="form-control">
+
+
+    
+     
+     <h2> Datos Academicos</h2> <!-- Inicia DATOS ACADEMICOS--> 
+    
+    <h4>Ingrese su grado academico</h4>
+     <input type="text" id="grado_academico" placeholder="Ingrese su grado academico" class="form-control">
+
+    <h4>Ingrese título</h4>
+     <input type="text" id="titulo" placeholder="Ingrese su titulo" class="form-control">
+
+    <h4>Ingrese su cedula</h4>
+     <input type="text" id="cedula" placeholder="Ingrese su cedula" class="form-control">
+
+    <h4>Ingrese estatus</h4>
+
+      <div>
+       <input type="checkbox" id="estatus" name="scales" >
+       <label for="scales">En proceso</label>
+      </div>
+      <div>
+       <input type="checkbox" id="estatus" name="scales">
+       <label for="scales">Finalizado</label>
+      </div>
+
+
+
+
+      <p>
+        <h4 for="videoFile">Carga tu título en PDF:</h4>
+       <input type="file" id="file" accept="file/*">
+      </p>
+<p>
+  <h4 for="videoFile">Carga tu Cedula:</h4>
+  <input type="file" id="file" accept="file/*">
+</p>
+
+    <div class="centrado" >
+      <input type="submit" id="guardaracademicos" value="Guardar" ></input>
+    
+    </div>
+     </section>
+     <section id="dunkles" class="tab-panel" >
+
+    
+    <h2>Producción academica</h2> <!-- Inicia PRODUCCION ACADEMICA--> 
+      <br>
+    
+      <!--en espera de instrucciónes-->
+    <h4>Ingrese nombre del evento asistidos</h4>
+     <input type="text" id="evento" placeholder="Ingrese nombre del evento asistidos"  class="form-control">
+
+    <h4>Ingrese la fecha </h4>
+      <input type="date" id="Fecha_evento" name="fecha_evento" placeholder="Fecha del evento" class="form-control" >
+      
+    <h4>Ingrese la fecha </h4>
+      <input type="date" id="Fecha_evento" name="fecha_evento" placeholder="Fecha del evento" class="form-control" >
+  
+
+    <h4>Ingrese nombre de la institución</h4>
+     <input type="text" id="institucion" placeholder="Ingrese nombre de la institución"  class="form-control">
+
+
+    <h4>Ingrese nombre del evento impartdo</h4>
+     <input type="text" id="cedula" placeholder="Ingrese nombre del evento asistidos" class="form-control">
+
+
+     <div class="centrado" >
+      <input type="submit" id="guardargenerales" value="Guardar" ></input>
+    
+    </div>
+    </section> <section id="dunkles" class="tab-panel" >
+  <h2>Datos Medicos</h2> <!-- Inicia DATOS MEDICOS--> 
+      <br>
+    <h4>Ingrese su número de seguro social</h4>
+     <input type="text" id="nss" placeholder="Ingrese su número de seguro social"  class="form-control">
+
+    <h4>Alergías</h4>
+     <input type="text" id="alergias" placeholder="Alergias"  class="form-control">
+
+    <h4>Patologías</h4>
+     <input type="text" id="alergias" placeholder="Patologías" class="form-control">
+ 
+     
+     <h4>Tipos de sangre</h4>
+    <select name="tipo_sangre" id="tipo_sangre" > 
+      <option value="">Seleccione el tipo de sangre</option>
+      <option value="a+"> A+</option>
+      <option value="a-">A-</option>
+      <option value="b+"> B+</option>
+      <option value="b-">B-</option>
+      <option value="ab+"> AB+</option>
+      <option value="ab-"> AB-</option>
+      <option value="o+">O+</option>
+      <option value="o-"> O-</option>
+      
+    </select>
+
+    <h4>Nombre de contaco de emergencia</h4>
+     <input type="text" id="nombre_contacto_emergencia" placeholder="Nombre de contacto de emergencia"  class="form-control">
+
+    <h4>Número de contaco de emergencia</h4>
+     <input type="number" id="nombre_contacto_emergencia" placeholder="Número de contacto de emergencia" class="form-control">
+
+     <div class="centrado" >
+      <input type="submit" id="guardargenerales" value="Guardar" ></input>
+    
+    </div>
+
+    </section>
+   
+  </div>
+  
 </div>
-</form>
 
 @endsection 
 
