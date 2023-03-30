@@ -34,5 +34,8 @@ Route::get('cdd/datosgenerales', function () {
     return view ('datosgenerales');
    
 });
+
  Route ::post('cdd/registrar', [DocenteController::class, 'store'])->name('registrar');
+ Route ::get('cdd/datosgenerales',[DocenteController::class, 'create'])->name('inicio');
+ Route ::get('cdd/datosgenerales',[DocenteController::class, 'create'])->name('inicio');
 

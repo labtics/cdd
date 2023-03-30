@@ -25,12 +25,12 @@ class RequestDocente extends FormRequest
     {
         return [
             //Generales
-            'empleado'  => 'min:5|max:5|required|numeric',
+            'empleado'  => 'min:5|required',
             'nombre'  => 'min:1|max:70|required',
             'apellido_paterno' => 'min:5|max:70|required',
              'apellido_materno' => 'min:5|max:70|required',
              'sexo' => 'required',
-             'fecha_nacimiento' => 'min:8|required|numeric',
+             'fecha_nacimiento' => 'min:8|required|date',
              'edad' => 'required|numeric',
              'telefono1' => 'min:10|required|numeric',
              'telefono2' => 'min:10|required|numeric',

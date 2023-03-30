@@ -8,6 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Municipio extends Model
 {
     use HasFactory;
+    
     protected $table = 'municipios';
-    protected $fillable = ['id','estado_id','nombre']; 
+
+    protected $fillable = ['estado_id','nombre'];
+
+     public static function municipios ($id)
+     {
+    	return Municipio::where('estado_id','=',$id)->get();
+     }
 }

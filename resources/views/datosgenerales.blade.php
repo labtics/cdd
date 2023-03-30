@@ -153,15 +153,40 @@ Datos generales
      <p></p> 
     <input type="text" id="tiponacionalidad" placeholder="Escriba su nacionalidad" class="form-control"> 
 
-    <h4>Seleccione su estado</h4>
+    <h4>Selecione su Estado </h4>
+    <div class="form-group">
+    <select class="form-control" name="estado" id="estado">
+    @foreach ($estados as $estados)
+    <option value="{{ $estados['id'] }}">
+    {{ $estados['nombre'] }}
+    </option>
+    @endforeach
+    </select>
+    </div>
+                      
+
+    <!-- <h4>Seleccione su estado</h4>
     <select name="estado" id="estado" >
         <option value=""> Selecciona tu estado</option>
     </select>
+    -->
 
-    <h4>Seleccione su municipio</h4>
+    <h4>Selecione su Estado </h4>
+    <div class="form-group">
+    <select class="form-control" name="municipios" id="municipios">
+    @foreach ($municipios as $municipios)
+    <option value="{{ $municipios['id'] }}">
+    {{ $estados['nombre'] }}
+    </option>
+    @endforeach
+    </select>
+    </div>
+    
+    <!--<h4>Seleccione su municipio</h4>
       <select name="municipio" id="municipio">
         <option value=""> Selecciona tu municipio</option>
       </select>
+-->
 
     <h4>Ingresa tu calle</h4>
       <input type="text" id="calle" placeholder="Ingrese su calle"  class="form-control">

@@ -7,6 +7,8 @@ use App\Models\General;
 use App\Models\User;
 use App\Models\Domiciliar;
 use App\Http\Requests\RequestDocente;
+use App\Models\Estado;
+use App\Models\Municipio;
 
 use \DB;
 
@@ -29,7 +31,19 @@ class DocenteController extends Controller
      */
     public function create()
     {
-        //
+        $estados= Estado::all('nombre');
+        return view('datosgenerales', compact('estados'));
+
+    }
+
+    public function getMunicipios(Request $request, $id)
+    {
+        if($request->ajax())
+        {
+            $municipios = Municipio::municipios($id);
+                return response()->json($municipios);
+        }
+
     }
 
     /**
