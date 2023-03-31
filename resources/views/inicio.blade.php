@@ -1,7 +1,7 @@
 @extends ('layouts.plantilla')
 
 @section('title')
-Datos generales
+Inicio
 @endsection 
 
 @section('contenido') 
@@ -142,7 +142,7 @@ Datos generales
     </section>
     <section id="rauchbier" class="tab-panel" >
       <h2>Datos Domiciliarios</h2> <!-- Inicia DATOS DOMICILIARIOS--> 
-      
+    
       <h4>Selecione su nacionalidad </h4>
    
     <select name="nacionalidad" id="nacionalidad" >
@@ -188,54 +188,54 @@ Datos generales
     
 
     <h4>Nombre de la dependencia</h4>
-     <input type="text" id="dependencia" placeholder="Ingrese su dependencia"  class="form-control">
+     <input type="text" name="dependencia" id="dependencia" placeholder="Ingrese su dependencia"  class="form-control">
 
     <h4>Dirección de la dependencia</h4>
-     <input type="text" id="direccion_dependencia" placeholder="Dirección de la dependencia"  class="form-control">
+     <input type="text" id="direccion_dependencia" name="direccion_dependencia" placeholder="Dirección de la dependencia"  class="form-control">
 
      <h4>Horarios</h4>
-     <input type="text" id="horarios" placeholder="Horario"  class="form-control">
+     <input type="text"  name="horarios" id="horarios" placeholder="Horario"  class="form-control">
      
     <h4>Días laborales</h4>
     <div>
-       <input type="checkbox" id="diaslaborales" name="scales"  >
+       <input type="checkbox" id="diaslaborales" name="diasdelasemana"  >
        <label for="scales">Lunes</label>
     </div>
     <div>
-       <input type="checkbox" id="diaslaborales" name="scales"  >
+       <input type="checkbox" id="diaslaborales" name="diasdelasemana"  >
        <label for="scales">Martes</label>
     </div>
     <div>
-       <input type="checkbox" id="diaslaborales" name="scales" >
+       <input type="checkbox" id="diaslaborales" name="diasdelasemana" >
        <label for="scales">Miercoles</label>
     </div>
     <div>
-       <input type="checkbox" id="diaslaborales" name="scales" >
+       <input type="checkbox" id="diaslaborales" name="diasdelasemana" >
        <label for="scales">Jueves</label>
     </div>
     <div>
-       <input type="checkbox" id="diaslaborales" name="scales">
+       <input type="checkbox" id="diaslaborales" name="diasdelasemana">
        <label for="scales">Viernes</label>
     </div>
     <div>
-       <input type="checkbox" id="diaslaborales" name="scales" >
+       <input type="checkbox" id="diaslaborales" name="diasdelasemana" >
        <label for="scales">Sabado</label>
     </div>
     <div>
-       <input type="checkbox" id="diaslaborales" name="scales" >
+       <input type="checkbox" id="diaslaborales" name="diasdelasemana" >
        <label for="scales">Domingo</label>
     </div>
 
      
 
     <h4>Nombre del jefe</h4>
-     <input type="text" id="nombre_jefe" placeholder="Nombre del jefe"  class="form-control">
+     <input type="text" name="nombre_jefe" id="nombre_jefe" placeholder="Nombre del jefe"  class="form-control">
 
     <h4>Teléfono de la dependencia</h4>
-     <input type="text" id="telefono_dependencia" placeholder="Teléfono de la dependencia"  class="form-control">
+     <input type="text" name="telefono_dependencia" id="telefono_dependencia" placeholder="Teléfono de la dependencia"  class="form-control">
       
      <div class="centrado" >
-      <input type="submit" id="guardardependencia" value="Guardar"></input>
+      <input type="submit"  id="guardargenerales" value="Guardar" ></input>
     
     </div>
   
@@ -248,22 +248,22 @@ Datos generales
      <h2> Datos Academicos</h2> <!-- Inicia DATOS ACADEMICOS--> 
     
     <h4>Ingrese su grado academico</h4>
-     <input type="text" id="grado_academico" placeholder="Ingrese su grado academico" class="form-control">
+     <input type="text" id="grado_academico" name="grado_academico" placeholder="Ingrese su grado academico" class="form-control">
 
     <h4>Ingrese título</h4>
-     <input type="text" id="titulo" placeholder="Ingrese su titulo" class="form-control">
+     <input type="text" id="titulo" name="titulo" placeholder="Ingrese su titulo" class="form-control">
 
     <h4>Ingrese su cedula</h4>
-     <input type="text" id="cedula" placeholder="Ingrese su cedula" class="form-control">
+     <input type="text" id="cedula" name="cedula" placeholder="Ingrese su cedula" class="form-control">
 
     <h4>Ingrese estatus</h4>
 
       <div>
-       <input type="checkbox" id="estatus" name="scales" >
+       <input type="checkbox" id="estatus" name="estatus" >
        <label for="scales">En proceso</label>
       </div>
       <div>
-       <input type="checkbox" id="estatus" name="scales">
+       <input type="checkbox" id="estatus" name="estatus">
        <label for="scales">Finalizado</label>
       </div>
 
@@ -272,11 +272,11 @@ Datos generales
 
       <p>
         <h4 for="videoFile">Carga tu título en PDF:</h4>
-       <input type="file" id="file" accept="file/*">
+       <input type="file" name="titulopdf" id="file" accept="file/*">
       </p>
 <p>
   <h4 for="videoFile">Carga tu Cedula:</h4>
-  <input type="file" id="file" accept="file/*">
+  <input type="file" name="cedulapdf" id="file" accept="file/*">
 </p>
 
     <div class="centrado" >
@@ -292,7 +292,7 @@ Datos generales
     
       <!--en espera de instrucciónes-->
     <h4>Ingrese nombre del evento asistidos</h4>
-     <input type="text" id="evento" placeholder="Ingrese nombre del evento asistidos"  class="form-control">
+     <input type="text" id="evento" name="eventosasistidos" placeholder="Ingrese nombre del evento asistidos"  class="form-control">
 
     <h4>Ingrese la fecha </h4>
       <input type="date" id="Fecha_evento" name="fecha_evento" placeholder="Fecha del evento" class="form-control" >
@@ -302,11 +302,11 @@ Datos generales
   
 
     <h4>Ingrese nombre de la institución</h4>
-     <input type="text" id="institucion" placeholder="Ingrese nombre de la institución"  class="form-control">
+     <input type="text" id="institucion" name="institucion" placeholder="Ingrese nombre de la institución"  class="form-control">
 
 
     <h4>Ingrese nombre del evento impartdo</h4>
-     <input type="text" id="cedula" placeholder="Ingrese nombre del evento asistidos" class="form-control">
+     <input type="text" id="cedula" name="nombreeventoimpartido" placeholder="Ingrese nombre del evento asistidos" class="form-control">
 
 
      <div class="centrado" >
@@ -317,13 +317,13 @@ Datos generales
   <h2>Datos Medicos</h2> <!-- Inicia DATOS MEDICOS--> 
       <br>
     <h4>Ingrese su número de seguro social</h4>
-     <input type="text" id="nss" placeholder="Ingrese su número de seguro social"  class="form-control">
+     <input type="text" id="nss" name="nss" placeholder="Ingrese su número de seguro social"  class="form-control">
 
     <h4>Alergías</h4>
-     <input type="text" id="alergias" placeholder="Alergias"  class="form-control">
+     <input type="text" id="alergias" name="alergias" placeholder="Alergias"  class="form-control">
 
     <h4>Patologías</h4>
-     <input type="text" id="alergias" placeholder="Patologías" class="form-control">
+     <input type="text" id="patologias" name="patologias" placeholder="Patologías" class="form-control">
  
      
      <h4>Tipos de sangre</h4>
@@ -341,10 +341,10 @@ Datos generales
     </select>
 
     <h4>Nombre de contaco de emergencia</h4>
-     <input type="text" id="nombre_contacto_emergencia" placeholder="Nombre de contacto de emergencia"  class="form-control">
+     <input type="text" id="nombre_contacto_emergencia" name="nombre_contacto_emergencia" placeholder="Nombre de contacto de emergencia"  class="form-control">
 
     <h4>Número de contaco de emergencia</h4>
-     <input type="number" id="nombre_contacto_emergencia" placeholder="Número de contacto de emergencia" class="form-control">
+     <input type="number" id="nombre_contacto_emergencia" name="nombre_contacto_emergencia" placeholder="Número de contacto de emergencia" class="form-control">
 
      <div class="centrado" >
       <input type="submit" id="guardargenerales" value="Guardar" ></input>

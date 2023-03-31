@@ -28,10 +28,10 @@ Route::get('cdd/principal', function () {
    
 });
 
-Route::get('cdd/datosgenerales', function () {
+Route::get('cdd/inicio', function () {
 
  
-    return view ('datosgenerales');
+    return view ('inicio');
    
 });
  Route ::post('cdd/registrar', [DocenteController::class, 'store'])->name('registrar');

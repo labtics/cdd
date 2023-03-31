@@ -21,8 +21,8 @@ iniciosesion
 <body>
 
 <form action="#" method="POST" >
-    <div id="login-box" >
-        <h1>Inicio sesión</h1> 
+    <div id="login-box" class="login-box">
+        <h2>Inicio sesión</h2> 
 
         <div class="form">
             <div > 
@@ -45,30 +45,12 @@ iniciosesion
 
 <style>
 
-#t1{
-    width: 100%;
-    border: 15px;
-    color: #fffeff;
-height: 90%;
-    background-color: #105709;
-    }
 
-    a.a1{
-        color: #fffeff;
-    }
-
-  
-    .slider-container {
-  display: flex;
-  width: 100%;
-  height: 80vh;
-  overflow-x:scroll;
-  scroll-snap-type: x mandatory;
-}
 
 #login-box {
     border: 1px solid white;
     width: 30%;
+    height: 50%;
     text-align: center;
     margin: 0 auto;
     margin-top: 15%;

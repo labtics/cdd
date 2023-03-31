@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Facade;
-
+ 
 return [
-
+    
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -82,7 +82,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -95,7 +95,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -108,7 +108,8 @@ return [
     |
     */
 
-    'faker_locale' => 'en_US',
+    'faker_locale' => 'es',
+   
 
     /*
     |--------------------------------------------------------------------------
@@ -212,4 +213,8 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
-];
+
+   
+
+        Laraveles\Spanish\SpanishServiceProvider::class,
+    ];
