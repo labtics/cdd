@@ -37,5 +37,5 @@ Route::get('cdd/datosgenerales', function () {
 
  Route ::post('cdd/registrar', [DocenteController::class, 'store'])->name('registrar');
  Route ::get('cdd/datosgenerales',[DocenteController::class, 'create'])->name('inicio');
- Route ::get('cdd/datosgenerales',[DocenteController::class, 'create'])->name('inicio');
+ Route::get('municipios/{id}','DocenteController@getMunicipios');
 

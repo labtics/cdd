@@ -171,26 +171,15 @@ Datos generales
     </select>
     -->
 
-    <h4>Selecione su Estado </h4>
-    <div class="form-group">
-    <select class="form-control" name="municipios" id="municipios">
-    @foreach ($municipios as $municipios)
-    <option value="{{ $municipios['id'] }}">
-    {{ $estados['nombre'] }}
-    </option>
-    @endforeach
-    </select>
-    </div>
     
-    <!--<h4>Seleccione su municipio</h4>
+    <h4>Seleccione su municipio</h4>
       <select name="municipio" id="municipio">
         <option value=""> Selecciona tu municipio</option>
       </select>
--->
+
 
     <h4>Ingresa tu calle</h4>
-      <input type="text" id="calle" placeholder="Ingrese su calle"  class="form-control">
-
+ 
     <h4>Ingresa tu colonia</h4>
       <input type="text" id="colonia" placeholder="Ingrese su colonia" class="form-control">
 
