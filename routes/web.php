@@ -17,8 +17,8 @@ use App\Http\Controllers\DocenteController;
 Route::get('cdd/iniciosesion', function () {
 
   /*  $users = ['juan', 'pedro', 'maria' , 'ana'];-->*/
-    return view ('iniciosesion');
-   
+    return view ('datosgenerales');
+    
 });
 
 Route::get('cdd/principal', function () {
@@ -34,7 +34,10 @@ Route::get('cdd/inicio', function () {
     return view ('inicio');
    
 });
+
  Route ::post('cdd/registrar', [DocenteController::class, 'store'])->name('registrar');
+ Route ::get('cdd/datosgenerales',[DocenteController::class, 'create'])->name('inicio');
+ Route::get('municipios/{id}','DocenteController@getMunicipios');
 
 
  Route::get('cdd/Menuprincipal', function () {

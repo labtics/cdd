@@ -138,8 +138,7 @@ Inicio
     <h4>Ingrese su CURP </h4>
      <input type="text" id="curp" name="curp" placeholder="CURP" class="form-control">
 
-    
-     
+
      <div class="centrado" >
       <input type="submit" id="guardargenerales" value="Guardar" ></input>
     
@@ -160,19 +159,33 @@ Inicio
      <p></p> 
     <input type="text" id="tiponacionalidad" placeholder="Escriba su nacionalidad" class="form-control"> 
 
-    <h4>Seleccione su estado</h4>
+    <h4>Selecione su Estado </h4>
+    <div class="form-group">
+    <select class="form-control" name="estado" id="estado">
+    @foreach ($estados as $estados)
+    <option value="{{ $estados['id'] }}">
+    {{ $estados['nombre'] }}
+    </option>
+    @endforeach
+    </select>
+    </div>
+                      
+
+    <!-- <h4>Seleccione su estado</h4>
     <select name="estado" id="estado" >
         <option value=""> Selecciona tu estado</option>
     </select>
+    -->
 
+    
     <h4>Seleccione su municipio</h4>
       <select name="municipio" id="municipio">
         <option value=""> Selecciona tu municipio</option>
       </select>
 
-    <h4>Ingresa tu calle</h4>
-      <input type="text" id="calle" placeholder="Ingrese su calle"  class="form-control">
 
+    <h4>Ingresa tu calle</h4>
+ 
     <h4>Ingresa tu colonia</h4>
       <input type="text" id="colonia" placeholder="Ingrese su colonia" class="form-control">
 

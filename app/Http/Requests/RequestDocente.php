@@ -25,6 +25,7 @@ class RequestDocente extends FormRequest
     {
         return [
             //Generales
+<<<<<<< HEAD
                 'empleado'  => 'min:5|required',
                 'nombre'  => 'min:1|max:70|required',
                 'apellido_paterno' => 'min:5|max:70|required',
@@ -84,6 +85,22 @@ class RequestDocente extends FormRequest
 
             
 
+=======
+            'empleado'  => 'min:5|required',
+            'nombre'  => 'min:1|max:70|required',
+            'apellido_paterno' => 'min:5|max:70|required',
+             'apellido_materno' => 'min:5|max:70|required',
+             'sexo' => 'required',
+             'fecha_nacimiento' => 'min:8|required|date',
+             'edad' => 'required|numeric',
+             'telefono1' => 'min:10|required|numeric',
+             'telefono2' => 'min:10|required|numeric',
+             'estado_civil' => 'required',
+             'categoria' => 'required|min:1',
+             'categoria_tipo'=> 'required|min:1',
+             'rfc'=> 'required|min:13',
+             'curp'=>'required|min:27'
+>>>>>>> 022d10caafd980dc95fb2fcedb371f1f838068ad
 
 
         ];
