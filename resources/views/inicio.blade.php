@@ -1,5 +1,6 @@
 @extends ('layouts.plantilla')
 
+<!-- Tienes que llevar la plantilla desde aqui-->
 @section('title')
 Inicio
 @endsection 
@@ -41,8 +42,13 @@ Inicio
     </style> 
     <link rel="stylesheet" href="{{asset('css/tabs_modalidades.css')}}">
 
+
  <form action="{{ route('registrar')}}" method="post" >
 
+
+ <!-- Tienes que llevar la plantilla hasta aqui-->
+
+ 
  @csrf
 <div class="tabset">
   <!-- Tab 1 -->
@@ -315,39 +321,39 @@ Inicio
     </div>
     </section> <section id="dunkles" class="tab-panel" >
   <h2>Datos Medicos</h2> <!-- Inicia DATOS MEDICOS--> 
-      <br>
-    <h4>Ingrese su número de seguro social</h4>
-     <input type="text" id="nss" name="nss" placeholder="Ingrese su número de seguro social"  class="form-control">
+          <br>
+        <h4>Ingrese su número de seguro social</h4>
+        <input type="text" id="nss" name="nss" placeholder="Ingrese su número de seguro social"  class="form-control">
 
-    <h4>Alergías</h4>
-     <input type="text" id="alergias" name="alergias" placeholder="Alergias"  class="form-control">
+        <h4>Alergías</h4>
+        <input type="text" id="alergias" name="alergias" placeholder="Alergias"  class="form-control">
 
-    <h4>Patologías</h4>
-     <input type="text" id="patologias" name="patologias" placeholder="Patologías" class="form-control">
- 
-     
-     <h4>Tipos de sangre</h4>
-    <select name="tipo_sangre" id="tipo_sangre" > 
-      <option value="">Seleccione el tipo de sangre</option>
-      <option value="a+"> A+</option>
-      <option value="a-">A-</option>
-      <option value="b+"> B+</option>
-      <option value="b-">B-</option>
-      <option value="ab+"> AB+</option>
-      <option value="ab-"> AB-</option>
-      <option value="o+">O+</option>
-      <option value="o-"> O-</option>
-      
-    </select>
+        <h4>Patologías</h4>
+        <input type="text" id="patologias" name="patologias" placeholder="Patologías" class="form-control">
+    
+        
+        <h4>Tipos de sangre</h4>
+        <select name="tipo_sangre" id="tipo_sangre" > 
+          <option value="">Seleccione el tipo de sangre</option>
+          <option value="a+"> A+</option>
+          <option value="a-">A-</option>
+          <option value="b+"> B+</option>
+          <option value="b-">B-</option>
+          <option value="ab+"> AB+</option>
+          <option value="ab-"> AB-</option>
+          <option value="o+">O+</option>
+          <option value="o-"> O-</option>
+          
+        </select>
 
-    <h4>Nombre de contaco de emergencia</h4>
-     <input type="text" id="nombre_contacto_emergencia" name="nombre_contacto_emergencia" placeholder="Nombre de contacto de emergencia"  class="form-control">
+        <h4>Nombre de contaco de emergencia</h4>
+        <input type="text" id="nombre_contacto_emergencia" name="nombre_contacto_emergencia" placeholder="Nombre de contacto de emergencia"  class="form-control">
 
-    <h4>Número de contaco de emergencia</h4>
-     <input type="number" id="nombre_contacto_emergencia" name="nombre_contacto_emergencia" placeholder="Número de contacto de emergencia" class="form-control">
+        <h4>Número de contaco de emergencia</h4>
+        <input type="number" id="nombre_contacto_emergencia" name="nombre_contacto_emergencia" placeholder="Número de contacto de emergencia" class="form-control">
 
-     <div class="centrado" >
-      <input type="submit" id="guardargenerales" value="Guardar" ></input>
+        <div class="centrado" >
+          <input type="submit" id="guardargenerales" value="Guardar" ></input>
     
     </div>
 

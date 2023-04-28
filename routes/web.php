@@ -36,3 +36,54 @@ Route::get('cdd/inicio', function () {
 });
  Route ::post('cdd/registrar', [DocenteController::class, 'store'])->name('registrar');
 
+
+ Route::get('cdd/Menuprincipal', function () {
+
+ 
+  return view ('Menuprincipal');
+ 
+});
+
+Route::get('cdd/DatosGenerales', function () {
+
+ 
+  return view ('DatosGenerales');
+ 
+});
+
+
+Route::get('cdd/DatosDomiciliarios', function () {
+
+ 
+  return view ('DatosDomiciliarios');
+ 
+});
+
+
+Route::get('cdd/DatosDeOtraDependencia', function () {
+
+ 
+  return view ('DatosDeOtraDependencia');
+ 
+});
+
+Route::get('cdd/DatosAcademicos', function () {
+
+ 
+  return view ('DatosAcademicos');
+ 
+});
+
+Route::get('cdd/ProduccionAcademica', function () {
+
+ 
+  return view ('ProduccionAcademica');
+ 
+});
+
+Route::get('cdd/DatosMedicos', function () {
+
+ 
+  return view ('DatosMedicos');
+ 
+});
