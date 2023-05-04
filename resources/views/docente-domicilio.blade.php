@@ -58,7 +58,7 @@ Datos Domiciliarios
     <div class="col-md-2">
         <div class="form-group">
           <label>Código Postal</label>          
-          <input type="number" id="cp" name="cp" placeholder="C.P." class="form-control" >
+          <input type="number" id="codigo_postal" name="codigo_postal" placeholder="C.P." class="form-control" >
         </div>
     </div>
 

@@ -99,16 +99,21 @@ Datos De Otra Dependencia
     <div class="col-md-2">
         <div class="form-group">
          <label>Hora Entrada</label>
-         <input type="time" name="horario_entrada" min="12:00" max="18:00" step="600" class="form-control"> 
+         <input type="time" name="horario_entrada_s" min="12:00" max="18:00" step="600" class="form-control"> 
          </div>
     </div>
 
     <div class="col-md-2">
         <div class="form-group">
          <label>Hora Salida</label>
-         <input type="time" name="horario_salida" min="12:00" max="18:00" step="600" class="form-control"> 
+         <input type="time" name="horario_salida_s" min="12:00" max="18:00" step="600" class="form-control"> 
          </div>
     </div>
+
+    <center>
+        <a href="{{URL::previous ()}}"><button type="button" class="btn btn-secondary">Regresar</button></a>
+        <button class="btn btn-success"> <span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span> Guardar </button>
+    </center>
 
 </form>
 

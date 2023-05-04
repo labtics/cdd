@@ -12,7 +12,7 @@ class Domiciliar extends Model
     use HasFactory;
     protected $table='domicilios';
     protected $fillable = ['id','user_id','nacionalidad','estado_id','municipio_id',
-    'calle','colonia','codigo_postal','num_ex_int'];
+    'calle','colonia','codigo_postal','numero'];
 
     //Un domicilio corresponde a 1 maestro
     public function general(){
