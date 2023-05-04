@@ -52,22 +52,9 @@ class DocenteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(RequestDocente $request)
+    public function store(Request $request)
     {
-
-        $general = new General($request->all());
-        $empleado = $general->empleado;
-        
-        $user = User::select('id')->where('empleado', '=' , $empleado)->first();
-
-        $user_id = $user->id; 
-        $general->user_id=$user_id;
-        $general->saveOrFail();
-
-        $domiciliar = new Domiciliar($request->all());
-        $domiciliar->user_id=$user_id;
-        $domiciliar->saveOrFail();
-
+        dd($request);
 
     }
 

@@ -13,80 +13,14 @@ use App\Http\Controllers\DocenteController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::view('cdd/docente/tablero', 'docente-tablero');
 
-Route::get('cdd/iniciosesion', function () {
+Route::view('cdd/docente/generales', 'docente-generales');
+Route ::post('cdd/docente/generales/store', [DocenteController::class, 'storeGenerales'])->name('docente.storeGenerales');
 
-  /*  $users = ['juan', 'pedro', 'maria' , 'ana'];-->*/
-    return view ('datosgenerales');
-    
-});
+Route::view('cdd/docente/domicilio', 'docente-domicilio');
+Route ::post('cdd/docente/domicilio/store', [DocenteController::class, 'storeDomicilios'])->name('docente.storeDomicilios');
 
-Route::get('cdd/principal', function () {
+Route::view('cdd/docente/dependencia', 'docente-dependencia');
+Route ::post('cdd/docente/dependencia/store', [DocenteController::class, 'storeDependencias'])->name('docente.storeDependencias');
 
-  /*  $users = ['juan', 'pedro', 'maria' , 'ana'];-->*/
-    return view ('principal');
-   
-});
-
-Route::get('cdd/inicio', function () {
-
- 
-    return view ('inicio');
-   
-});
-
- Route ::post('cdd/registrar', [DocenteController::class, 'store'])->name('registrar');
- Route ::get('cdd/datosgenerales',[DocenteController::class, 'create'])->name('inicio');
- Route::get('municipios/{id}','DocenteController@getMunicipios');
-
-
- Route::get('cdd/Menuprincipal', function () {
-
- 
-  return view ('Menuprincipal');
- 
-});
-
-Route::get('cdd/DatosGenerales', function () {
-
- 
-  return view ('DatosGenerales');
- 
-});
-
-
-Route::get('cdd/DatosDomiciliarios', function () {
-
- 
-  return view ('DatosDomiciliarios');
- 
-});
-
-
-Route::get('cdd/DatosDeOtraDependencia', function () {
-
- 
-  return view ('DatosDeOtraDependencia');
- 
-});
-
-Route::get('cdd/DatosAcademicos', function () {
-
- 
-  return view ('DatosAcademicos');
- 
-});
-
-Route::get('cdd/ProduccionAcademica', function () {
-
- 
-  return view ('ProduccionAcademica');
- 
-});
-
-Route::get('cdd/DatosMedicos', function () {
-
- 
-  return view ('DatosMedicos');
- 
-});
