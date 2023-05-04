@@ -46,34 +46,58 @@ Datos Academicos
  <form action="{{ route('docente.storeAcademicos')}}" method="post" >
  
  <h2> Datos Academicos</h2> <!-- Inicia DATOS ACADEMICOS--> 
-    
+    <br>
+
+ <div class="col-md-4">
+        <div class="form-group">
     <h4>Ingrese su grado academico</h4>
      <input type="text" id="grado_academico" name="grado_academico" placeholder="Ingrese su grado academico" class="form-control">
 
-    <h4>Ingrese título</h4>
+  </div>
+ </div>
+    
+
+ <div class="col-md-4">
+        <div class="form-group">
+      <h4>Ingrese título</h4>
      <input type="text" id="titulo" name="titulo" placeholder="Ingrese su titulo" class="form-control">
 
+
+        </div>
+ </div>
+
+
+
+ <div class="col-md-4">
+        <div class="form-group">
     <h4>Ingrese su cedula</h4>
      <input type="text" id="cedula" name="cedula" placeholder="Ingrese su cedula" class="form-control">
+        </div>
+ </div>
 
-    <h4>Ingrese estatus</h4>
+       
 
-      <div>
-       <input type="checkbox" id="estatus" name="estatus" >
-       <label for="scales">En proceso</label>
+      <div class="col-md-4">
+          <div class="form-groud">
+      <h4>Marca tu status</h4>
+        <input type="checkbox" id="estatus" name="estatus" >
+        <label for="scales">En proceso</label>
+        
+        <input type="checkbox" id="estatus" name="estatus">
+        <label for="scales">Finalizado</label>
       </div>
-      <div>
-       <input type="checkbox" id="estatus" name="estatus">
-       <label for="scales">Finalizado</label>
       </div>
 
 
 
 
-      <p>
+      <div class="col-md-4">
+        <div class="form-group">
         <h4 for="videoFile">Carga tu título en PDF:</h4>
        <input type="file" name="titulopdf" id="file" accept="file/*">
-      </p>
+        </div>
+      </div>
+       
         <p>
         <h4 for="videoFile">Carga tu Cedula:</h4>
         <input type="file" name="cedulapdf" id="file" accept="file/*">
