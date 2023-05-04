@@ -7,9 +7,10 @@ use App\Models\General;
 use App\Models\User;
 use App\Models\Domiciliar;
 use App\Http\Requests\RequestDocente;
+use App\Models\Academico;
 use App\Models\Estado;
 use App\Models\Municipio;
-
+use App\Models\Otra_Dependencia;
 use \DB;
 
 class DocenteController extends Controller
@@ -35,17 +36,6 @@ class DocenteController extends Controller
         return view('datosgenerales', compact('estados'));
 
     }
-
-    public function getMunicipios(Request $request, $id)
-    {
-        if($request->ajax())
-        {
-            $municipios = Municipio::municipios($id);
-                return response()->json($municipios);
-        }
-
-    }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -58,6 +48,25 @@ class DocenteController extends Controller
 
     }
 
+    public function storeGenerales(Request $request){
+        $general = new General($request->all());
+        dd($general);
+    }
 
+    
+    public function storeDomicilios(Request $request){
+        $domiciliar = new Domiciliar($request->all());
+        dd($domiciliar);
+    }
+
+    public function storeDependencias(Request $request){
+        $otra_depen = new Otra_Dependencia($request->all());
+        dd($otra_depen);
+    }
+
+    public function storeAcademicos(Request $request){
+        $academicos = new Academico($request->all());
+        dd($academicos);
+    }
 
 }
