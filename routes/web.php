@@ -24,3 +24,5 @@ Route ::post('cdd/docente/domicilio/store', [DocenteController::class, 'storeDom
 Route::view('cdd/docente/dependencia', 'docente-dependencia');
 Route ::post('cdd/docente/dependencia/store', [DocenteController::class, 'storeDependencias'])->name('docente.storeDependencias');
 
+Route::view('cdd/docente/academicos', 'docente-academicos');
+Route ::post('cdd/docente/academicos/store', [DocenteController::class, 'storeAcademicos'])->name('docente.storeAcademicos');

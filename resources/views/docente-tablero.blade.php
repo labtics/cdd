@@ -76,7 +76,7 @@ Tablero
       <th scope="row">4</th>
       <td style='color:green'>Producción Académica</td>
       <td>  
-            <a href="{{url('cdd/docente/generales')}}" class="btn btn-warning">
+            <a href="{{url('cdd/docente/academicos')}}" class="btn btn-warning">
             <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
             </a>
 

@@ -43,7 +43,7 @@ Datos Academicos
     <link rel="stylesheet" href="{{asset('css/tabs_modalidades.css')}}">
 
 
- <form action="{{ route('registrar')}}" method="post" >
+ <form action="{{ route('docente.storeAcademicos')}}" method="post" >
  
  <h2> Datos Academicos</h2> <!-- Inicia DATOS ACADEMICOS--> 
     
